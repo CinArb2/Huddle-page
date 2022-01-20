@@ -1,0 +1,218 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul{
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+:root{
+  --font-heading: 'Poppins';
+  --font-body: 'Open Sans';
+  --primary-color: hsl(322, 100%, 66%);
+  --pale-cyan: hsl(193, 100%, 96%);
+  --dark-cyan: hsl(192, 100%, 9%);
+  --Grayish-Blue: hsl(208, 11%, 55%);
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--font-body);
+  color: var(--Grayish-Blue);
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, .cta_title{
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--dark-cyan);
+}
+
+.space-around{
+  padding: 2rem;
+}
+
+/* header section */
+
+header{
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  max-width: 900px;
+}
+
+.img-logo{
+  width: 50%;
+}
+
+/* Hero section */
+
+.hero{
+  padding-top: 18vh;
+  background-image: url(./images/bg-hero-mobile.svg);
+  background-color: var(--pale-cyan);
+  height: 70vh;
+}
+
+.hero_container{
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.hero_text-container{
+    max-width: 500px;
+    margin: auto;
+  }
+
+.hero_img-container{
+  max-width: 500px;
+  margin: auto;
+}
+
+.btn{
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 0.7rem 3rem;
+  border-radius: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-weight: bold;
+}
+
+.btn-white{
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  min-width: 120px;
+}
+
+.container{
+  padding-top: 10vh;
+}
+
+.card{
+  padding: 2rem;
+  box-shadow: rgba(118, 118, 126, 0.1) 0px 7px 29px 0px;
+  border-radius: 20px;
+  max-width: 450px;
+  margin: 2rem auto;
+}
+
+.card_img{
+  width: 80%;
+  max-width: 300px;
+  margin: auto;
+}
+
+footer{
+  padding: 20vh 15vw 2rem;
+  background-color: var(--dark-cyan);
+  text-align: left;
+  position: relative;
+}
+
+.logo_footer{
+ width: 50%;
+}
+
+li{
+  padding: 1rem 0;
+}
+
+.icon-location {
+  list-style-image: url(./images/icon-location.svg);
+}
+
+.icon-phone {
+  list-style-image: url(./images/icon-phone.svg);
+}
+
+.icon-email {
+  list-style-image: url(./images/icon-email.svg);
+}
+
+.cta{
+  position: relative;
+  top: 80px;
+  background-color: white;
+  min-height: 25vh;
+  z-index: 1;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.copyright{
+  font-size: clamp(11px,2vw, 16px);
+  text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+
+  .hero_container{
+    flex-direction: row;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  header{
+  padding-inline: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  }
+
+  .hero_text-container{
+    text-align: left;
+  }
+
+  .hero_text{
+    padding-left: 0;
+  }
+
+  .card{
+    max-width: 900px;
+    display: flex;
+  }
+  .cta{
+    max-width: 600px;
+  }
+ 
+}
