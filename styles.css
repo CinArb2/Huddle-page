@@ -84,7 +84,7 @@ header{
   padding-top: 18vh;
   background-image: url(./images/bg-hero-mobile.svg);
   background-color: var(--pale-cyan);
-  height: 70vh;
+  
 }
 
 .hero_container{
@@ -186,6 +186,10 @@ li{
 }
 
 @media screen and (min-width: 769px) {
+
+  .hero{
+    height: 70vh;
+  }
 
   .hero_container{
     flex-direction: row;
